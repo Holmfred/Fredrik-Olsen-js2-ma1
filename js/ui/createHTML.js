@@ -6,6 +6,6 @@ export function createHTML(results) {
         itemContainer.innerHTML += `<div class="items"
                                         <h2>${item.title}</h2>
                                         <p>${item.price}$</p>
-                                        </div>`
+                                    </div>`
     })
 }
