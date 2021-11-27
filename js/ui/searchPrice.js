@@ -1,6 +1,7 @@
 import { createHTML } from "./createHTML.js";
+import { displayError } from "./displayMessage.js";
 
-export function searchPrice (item) {
+export function searchPrice (items) {
 
     const search = document.querySelector(".search");
 
@@ -9,16 +10,13 @@ export function searchPrice (item) {
     
         const searchValue = event.target.value.trim();
 
-        const priceFilter = items.price.filter(function(item) {
-            if(searchValue < 50) {
+        const filteredPrice = items.filter(function(item) {
+            if(item.price <= searchValue) {
                 return true
             }
+            
         })
-        
-        console.log(searchValue)
 
+        createHTML(filteredPrice)
     };
-
-    createHTML();
-    
 }

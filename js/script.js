@@ -8,9 +8,8 @@ async function getItems() {
         const response = await fetch(url);
         const results = await response.json();
         
-        console.log(results);
         createHTML(results)
-        priceSearch(results)
+        searchPrice(results)
 
         
     } catch (error) {
