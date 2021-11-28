@@ -3,6 +3,7 @@ import { searchPrice } from "./ui/searchPrice.js";
 import { displayError } from "./ui/displayMessage.js";
 const url = "https://fakestoreapi.com/products/"
 
+
 async function getItems() {
     try {
         const response = await fetch(url);
